@@ -5,8 +5,15 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:${VARIANT}
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
-# Jupyter environment
-RUN pip3 install --disable-pip-version-check --no-cache-dir ipykernel jupyter
+# Jupyter environment + dodatkowe pakiety
+RUN pip3 install --disable-pip-version-check --no-cache-dir \
+    ipykernel \
+    jupyter \
+    qiskit \
+    matplotlib \
+    pillow \
+    pycryptodomex \
+    cryptography
 
 USER vscode
 
