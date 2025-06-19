@@ -1,10 +1,10 @@
 def test_imports():
-packages = [
-    "qiskit",
-    "matplotlib",
-    "PIL",  # Pillow
-    "Cryptodome",  # Pycryptodomex
-    "cryptography"
+    packages = [
+        "qiskit",
+        "matplotlib",
+        "PIL",  # Pillow
+        "Cryptodome",  # Pycryptodomex
+        "cryptography"
 ]
 
 for pkg in packages:
