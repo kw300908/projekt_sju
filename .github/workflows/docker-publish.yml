@@ -31,7 +31,8 @@ jobs:
 
       - name: Run test script inside container
         run: |
-          docker run --rm sjuprojekt python /home/vscode/workspace/test.py
+          docker run --rm -v ${{ github.workspace }}:/workspace -w /workspace sjuprojekt python test.py
+
       # koniec testu
 
       - name: Log in to GitHub Container Registry (GHCR)
