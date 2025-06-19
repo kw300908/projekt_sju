@@ -6,7 +6,7 @@ def test_imports():
         "Cryptodome",  # Pycryptodomex
         "cryptography"
     ]
-    
+
     for pkg in packages:
         try:
             __import__(pkg)
