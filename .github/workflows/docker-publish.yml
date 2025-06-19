@@ -32,12 +32,6 @@ jobs:
       - name: Run test script inside container
         run: |
           docker run --rm sjuprojekt python /home/vscode/workspace/test.py
-          - name: Build Docker image
-        run: docker build -t sjuprojekt .
-
-      - name: Run test script inside container
-        run: |
-          docker run --rm sjuprojekt python /home/vscode/workspace/test.py
       # koniec testu
 
       - name: Log in to GitHub Container Registry (GHCR)
