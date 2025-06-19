@@ -3,8 +3,8 @@ name: Build and Publish Docker Image
 on:
   push:
     tags:
-      - '*' 
-  workflow_dispatch: 
+      - '*'  # uruchamia po wypchnięciu tagu (np. v1.0.0)
+  workflow_dispatch:  # umożliwia uruchomienie ręczne
 
 env:
   IMAGE_NAME: sjuprojekt
@@ -17,7 +17,7 @@ jobs:
 
     permissions:
       contents: read
-      packages: write 
+      packages: write
 
     steps:
       - name: Checkout repository
@@ -29,7 +29,11 @@ jobs:
       - name: Build Docker image
         run: docker build -t ${{ env.IMAGE_NAME }} .
 
-      - name: Log in to GitHub Container Registry
+      - name: Run test script inside container
+        run: |
+          docker run --rm ${{ env.IMAGE_NAME }} python /home/vscode/workspace/test.py
+
+      - name: Log in to GitHub Container Registry (GHCR)
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
