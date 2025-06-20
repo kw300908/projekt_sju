@@ -40,7 +40,7 @@ W tym etapie utworzono bazowe repozytorium, nie zawierało ono jeszcze kluczowyc
 
 ---
 
-![](../images/1.png)
+![](images/1.png)
 
 ---
 
@@ -133,7 +133,7 @@ def test_imports():
 
 ---
 
-![w:600](../images/4.png)
+![w:600](images/4.png)
 
 ---
 
@@ -165,7 +165,7 @@ Dzięki temu środowisko Codespace korzysta z obrazu zbudowanego w GHCR.
 ```
 ---
 
-![](../images/5.2.png)
+![](images/5.2.png)
 
 ------
 
@@ -197,7 +197,7 @@ Aby wykorzystać obraz z GitHub Container Registry jako środowisko developerski
 
 ---
 
-![](../images/7.png)
+![](images/7.png)
 
 ---
 
@@ -212,7 +212,7 @@ Aby wykorzystać obraz z GitHub Container Registry jako środowisko developerski
 
 ---
 
-![](../images/8.png)
+![](images/8.png)
 
 ---
 
